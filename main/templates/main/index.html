@@ -1,3 +1,8 @@
+{% load bootstrap4 %}
+{% load static %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
 <!DOCTYPE html>
 <html lang="en">
 <!-- Basic -->
@@ -20,15 +25,15 @@
     <link rel="apple-touch-icon" href="#" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
     <!-- Pogo Slider CSS -->
-    <link rel="stylesheet" href="css/pogo-slider.min.css" />
+    <link rel="stylesheet" href="{% static 'css/pogo-slider.min.css' %}" />
     <!-- Site CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}" />
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -42,7 +47,7 @@
     <!-- LOADER -->
     <div id="preloader">
         <div class="loader">
-            <img src="images/loader.gif" alt="#" />
+            <img src="{% static 'images/loader.gif' %}" alt="#" />
         </div>
     </div>
     <!-- end loader -->
@@ -52,7 +57,7 @@
     <header class="top-header">
         <nav class="navbar header-nav navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="image"></a>
+                <a class="navbar-brand" href="index.html"><img src="{% static 'img/logo.png' %}" alt="image"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
@@ -71,7 +76,7 @@
                 <div class="search-box">
                     <input type="text" class="search-txt" placeholder="Search">
                     <a class="search-btn">
-                        <img src="images/search_icon.png" alt="#" />
+                        <img src="{% static 'images/search_icon.png' %}" alt="#" />
                     </a>
                 </div>
             </div>
@@ -152,7 +157,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12 text_align_center padding_0">
                     <div class="full">
-                        <img class="img-responsive" src="img/img-2png.png" alt="#" />
+                        <img class="img-responsive" src="{% static 'img/img-2png.png' %}" alt="#" />
                     </div>
                 </div>
 
@@ -191,7 +196,7 @@
 			   <div class="col-sm-6 col-md-4">
 			     <div class="service_blog">
 				    <div class="service_icons">
-					   <img width="75" height="75" src="img/icon-1.png" alt="#">
+					   <img width="75" height="75" src="{% static 'img/icon-1.png' %}" alt="#">
 					</div>
 					<div class="full">
 					   <h4>DIGITAL marketing</h4>
@@ -205,7 +210,7 @@
 			   <div class="col-sm-6 col-md-4">
 			     <div class="service_blog">
 				    <div class="service_icons">
-					   <img width="75" height="75" src="img/icon-2.png" alt="#">
+					   <img width="75" height="75" src="{% static 'img/icon-2.png' %}" alt="#">
 					</div>
 					<div class="full">
 					   <h4>DIGITAL marketing</h4>
@@ -219,7 +224,7 @@
 			   <div class="col-sm-6 col-md-4">
 			     <div class="service_blog">
 				    <div class="service_icons">
-					   <img width="75" height="75" src="img/icon-3.png" alt="#">
+					   <img width="75" height="75" src="{% static 'img/icon-3.png' %}" alt="#">
 					</div>
 					<div class="full">
 					   <h4>DIGITAL marketing</h4>
@@ -233,7 +238,7 @@
 			   <div class="col-sm-6 col-md-4">
 			     <div class="service_blog">
 				    <div class="service_icons">
-					   <img width="75" height="75" src="img/icon-4.png" alt="#">
+					   <img width="75" height="75" src="{% static 'img/icon-4.png' %}" alt="#">
 					</div>
 					<div class="full">
 					   <h4>DIGITAL marketing</h4>
@@ -247,7 +252,7 @@
 			   <div class="col-sm-6 col-md-4">
 			     <div class="service_blog">
 				    <div class="service_icons">
-					   <img width="75" height="75" src="img/icon-5.png" alt="#">
+					   <img width="75" height="75" src="{% static 'img/icon-5.png' %}" alt="#">
 					</div>
 					<div class="full">
 					   <h4>DIGITAL marketing</h4>
@@ -261,7 +266,7 @@
 			   <div class="col-sm-6 col-md-4">
 			     <div class="service_blog">
 				    <div class="service_icons">
-					   <img width="75" height="75" src="img/icon-6.png" alt="#">
+					   <img width="75" height="75" src="{% static 'img/icon-6.png' %}" alt="#">
 					</div>
 					<div class="full">
 					   <h4>DIGITAL marketing</h4>
@@ -306,32 +311,32 @@
                             <div class="carousel-item active">
                                 <div class="row">
                                     <div class="col-lg-3 col-md-6 col-sm-12">
-                                        <img class="img-responsive" src="images/img1.png" alt="#" />
+                                        <img class="img-responsive" src="{% static 'images/img1.png'%}" alt="#" />
                                     </div>
                                     <div class="col-lg-3 col-md-6 col-sm-12">
-                                        <img class="img-responsive" src="images/img2.png" alt="#" />
+                                        <img class="img-responsive" src="{% static 'images/img2.png'%}" alt="#" />
                                     </div>
                                     <div class="col-lg-3 col-md-6 col-sm-12">
-                                        <img class="img-responsive" src="images/img3.png" alt="#" />
+                                        <img class="img-responsive" src="{% static 'images/img3.png'%}" alt="#" />
                                     </div>
                                     <div class="col-lg-3 col-md-6 col-sm-12">
-                                        <img class="img-responsive" src="images/img4.png" alt="#" />
+                                        <img class="img-responsive" src="{% static 'images/img4.png' %}" alt="#" />
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="row">
                                     <div class="col-lg-3 col-md-6 col-sm-12">
-                                        <img class="img-responsive" src="images/img1.png" alt="#" />
+                                        <img class="img-responsive" src="{% static 'images/img1.png'%}" alt="#" />
                                     </div>
                                     <div class="col-lg-3 col-md-6 col-sm-12">
-                                        <img class="img-responsive" src="images/img2.png" alt="#" />
+                                        <img class="img-responsive" src="{% static 'images/img2.png'%}" alt="#" />
                                     </div>
                                     <div class="col-lg-3 col-md-6 col-sm-12">
-                                        <img class="img-responsive" src="images/img3.png" alt="#" />
+                                        <img class="img-responsive" src="{% static 'images/img3.png'%}" alt="#" />
                                     </div>
                                     <div class="col-lg-3 col-md-6 col-sm-12">
-                                        <img class="img-responsive" src="images/img4.png" alt="#" />
+                                        <img class="img-responsive" src="{% static 'images/img4.png' %}" alt="#" />
                                     </div>
                                 </div>
                             </div>
@@ -448,7 +453,7 @@
                                     <div class="col-lg-4 col-md-4 col-sm-12">
                                         <div class="full">
 										   <div class="full team_member_img text_align_center"> 
-										      <img src="img/img-7.png" alt="#" />
+										      <img src="{% static 'img/img-7.png' %}" alt="#" />
 											 <div class="social_icon_team">
 											    <ul class="social_icon">
                                 <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -470,7 +475,7 @@
                                    <div class="col-lg-4 col-md-4 col-sm-12">
                                         <div class="full">
 										   <div class="full team_member_img text_align_center"> 
-										      <img src="img/img-8.png" alt="#" />
+										      <img src="{% static 'img/img-8.png' %}" alt="#" />
 											 <div class="social_icon_team">
 											    <ul class="social_icon">
                                 <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -492,7 +497,7 @@
                                    <div class="col-lg-4 col-md-4 col-sm-12">
                                         <div class="full">
 										   <div class="full team_member_img text_align_center"> 
-										      <img src="img/img-9.png" alt="#" />
+										      <img src="{% static 'img/img-9.png' %}" alt="#" />
 											 <div class="social_icon_team">
 											    <ul class="social_icon">
                                 <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -519,7 +524,7 @@
                                     <div class="col-lg-4 col-md-4 col-sm-12">
                                         <div class="full">
 										   <div class="full team_member_img text_align_center"> 
-										      <img src="img/img-7.png" alt="#" />
+										      <img src="{% static 'img/img-7.png' %}" alt="#" />
 											 <div class="social_icon_team">
 											    <ul class="social_icon">
                                 <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -541,7 +546,7 @@
                                    <div class="col-lg-4 col-md-4 col-sm-12">
                                         <div class="full">
 										   <div class="full team_member_img text_align_center"> 
-										      <img src="img/img-8.png" alt="#" />
+										      <img src="{% static 'img/img-8.png' %}" alt="#" />
 											 <div class="social_icon_team">
 											    <ul class="social_icon">
                                 <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -563,7 +568,7 @@
                                    <div class="col-lg-4 col-md-4 col-sm-12">
                                         <div class="full">
 										   <div class="full team_member_img text_align_center"> 
-										      <img src="img/img-9.png" alt="#" />
+										      <img src="{% static 'img/img-9.png' %}" alt="#" />
 											 <div class="social_icon_team">
 											    <ul class="social_icon">
                                 <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -608,7 +613,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 margin-bottom_30">
-				   <img src="img/f_logo.png" alt="#" />
+				   <img src="{% static 'img/f_logo.png' %}" alt="#" />
 				</div>
                <div class="col-xl-6 white_fonts">
                     <div class="row">
@@ -617,7 +622,7 @@
 					</div>
                         <div class="col-md-4">
                             <div class="full icon">
-                                <img src="images/social1.png">
+                                <img src="{% static 'images/social1.png' %}">
                             </div>
                             <div class="full white_fonts">
                                 <p>London 145
@@ -708,19 +713,19 @@
     <a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
 
     <!-- ALL JS FILES -->
-    <script src="js/jquery.min.js"></script>
-	<script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <!-- ALL PLUGINS -->
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.pogo-slider.min.js"></script>
-    <script src="js/slider-index.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/form-validator.min.js"></script>
-    <script src="js/contact-form-script.js"></script>
-    <script src="js/isotope.min.js"></script>
-    <script src="js/images-loded.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.pogo-slider.min.js' %}"></script>
+    <script src="{% static 'js/slider-index.js' %}"></script>
+    <script src="{% static 'js/smoothscroll.js' %}"></script>
+    <script src="{% static 'js/form-validator.min.js' %}"></script>
+    <script src="{% static 'js/contact-form-script.js' %}"></script>
+    <script src="{% static 'js/isotope.min.js' %}"></script>
+    <script src="{% static 'js/images-loded.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
 	<script>
 	/* counter js */
 
