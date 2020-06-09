@@ -1,11 +1,20 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View
-from .forms import UserForm
+from .forms import UserForm, CustomAuthenticationForm
 from django.contrib.auth import authenticate, login
 
-def index(request):
-    return render(request, 'main/index.html')
+class IndexView(View):
+	def get(self, request):
+		return render(request, 'main/index.html')
 
+class AboutUs(View):
+	def get(self, request):
+		return render(request, 'main/about.html')
+
+class Gallery(View):
+	def get(self, request):
+		pics = Picture.objects.all()
+		return render(request, 'main/index.html', {'pics':pics})
 
 class UserFormView(View):
     form_class = UserForm

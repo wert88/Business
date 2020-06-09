@@ -1,13 +1,25 @@
 {% extends 'main/base.html' %}
-{% load static %}
 {% load bootstrap4 %}
+{% load static %}
 {% bootstrap_css %}
 {% bootstrap_javascript jquery='full' %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
-	<form method="post" action="" enctype="multipart/form-data">
-	    {% csrf_token %}
-	    {{form}}
-	    <button type="button" class="submit-btn btn btn-primary">Log in</button>
-	</form>
+
+<div id="sign_up" style="margin-top:50px; padding:50px;">
+<div class="row justify-content-center">
+
+	<div class="col-8">
+		<form method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{ form|crispy }}
+			<button type="submit" class="submit-btn btn btn-primary" >Login</button>
+		</form>
+	</div>
+	
+</div>
+</div>
+
 {% endblock %}
