@@ -14,7 +14,7 @@ SECRET_KEY = '!1h@m0df9bt**2tw6dg%e&%-bt&qq0i@v6#vx-789574jdwbd%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['wert88.herokuapp.com']
+ALLOWED_HOSTS = ['wert88.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -113,7 +113,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL  = '/media/'
