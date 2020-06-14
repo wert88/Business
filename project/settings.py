@@ -46,6 +46,8 @@ MIDDLEWARE = [
 	'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
+
+
 ROOT_URLCONF = 'project.urls'
 
 TEMPLATES = [
@@ -122,6 +124,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL  = '/media/'
 
@@ -129,3 +133,24 @@ LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'index'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+import herokuify
+
+from herokuify.common import *              # Common settings, SSL proxy header
+from herokuify.aws import *                 # AWS access keys as configured in env
+from herokuify.mail.mailgun import *        # Email settings for Mailgun add-on
+from herokuify.mail.sendgrid import *       # ... or Sendgrid
+
+DATABASES = herokuify.get_db_config()       # Database config
+CACHES = herokuify.get_cache_config()       # Cache config for Memcache/MemCachier
+
+DEFAULT_FILE_STORAGE = "herokuify.storage.S3MediaStorage"
+MEDIA_URL = "https://{0}.s3.amazonaws.com/media/".format(AWS_STORAGE_BUCKET_NAME)
+
+STATICFILES_STORAGE = "herokuify.storage.CachedS3StaticStorage"
+STATIC_URL = "https://{0}.s3.amazonaws.com/static/".format(AWS_STORAGE_BUCKET_NAME)
+
+COMPRESS_STORAGE = "herokuify.storage.CachedS3StaticStorage"
+COMPRESS_OFFLINE = True
+
